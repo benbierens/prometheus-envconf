@@ -8,4 +8,4 @@ cat /etc/prometheus/prometheus.yml
 
 echo "Starting prometheus..."
 
-/bin/prometheus --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
+/bin/prometheus --web.listen-address="0.0.0.0:$PROM_PORT" --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
